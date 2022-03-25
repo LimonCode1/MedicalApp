@@ -9,11 +9,11 @@ const app = express();
 app.set('port', process.env.PORT || 5000);
 
 const dbOptions = { // database credentials in clever cloud 
-    host: 'bs2dwvzjsm81df5wdtar-mysql.services.clever-cloud.com',
+    host: 'us-cdbr-east-05.cleardb.net',
     port: 3306,
-    user: 'uazbdjixc7jrm9mg',
-    password: 'Byo23jVEebdhwcBveKve',
-    database: 'bs2dwvzjsm81df5wdtar'
+    user: 'b4735e6b2f2213',
+    password: 'fc00f36d',
+    database: 'heroku_9389f936ccfb0a4'
 }
 
 // Middlewares
