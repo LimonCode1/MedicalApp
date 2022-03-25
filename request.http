@@ -1,0 +1,60 @@
+###
+GET http://localhost:5000/api HTTP/1.1
+
+###
+POST http://localhost:5000/api/user/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "ID": "26",
+    "NOMBRE": "CARLOS ANDRES",
+    "APELLIDO": "SANCHEZ",
+    "EDAD": "22",
+    "GENERO": "0",
+    "CORREO": "EXAMPLE@MAIL.COM",
+    "FECHAREGISTRO": "2022-03-24",
+    "CLAVE": "1234",
+    "ESTADO": "1",
+    "ROL": 1,
+}
+
+###
+DELETE http://localhost:5000/api/2 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "una breve historia del tiempo",
+    "autor": "Stephen Hawking",
+    "edicion": 3
+}
+
+// roles
+###
+GET http://localhost:5000/api/roles HTTP/1.1
+
+###
+POST http://localhost:5000/api/rol/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "NOMBRE": "test",
+    "ESTADO": "1"
+}
+
+###
+DELETE http://localhost:5000/api/rol/4 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/rol/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "NOMBRE": "delete",
+    "ESTADO": "0"
+}
+
+
+

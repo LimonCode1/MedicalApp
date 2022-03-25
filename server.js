@@ -1,6 +1,8 @@
 const express = require('express');
 const mysql = require('mysql');
 const myconn = require('express-myconnection');
+const routes = require('./routes');
+
 
 // Server startup
 const app = express();
@@ -16,6 +18,15 @@ const dbOptions = { // database credentials in clever cloud
 
 // Middlewares
 app.use(myconn(mysql, dbOptions, 'single'))// other strategies are pool and request, for the last param
+app.use(express.json())
+
+
+
+// routes
+app.get('/', (req, res)=>{
+    res.send('Welcome to my Medical app API')
+})
+app.use('/api', routes)
 
 // server running 
 app.listen(5000, () => {
